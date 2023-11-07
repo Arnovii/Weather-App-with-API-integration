@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 {% endblock %}
 
-{% block body %}
+{% block body %} <!-- con 'action' indico a donde es enviado el formulario cuando se pulse el boton type=submit  -->
 <form class="form-signin" action="/login" method="POST">
     <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="200" height="200">
     {% with messages = get_flashed_messages() %}
@@ -25,13 +25,14 @@
     <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
         <!-- AQUI HE BORRADO UNA LINEA -->
     <div class="form-floating">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        <input type="text" class="form-control" id="username" name="usernameLogin" placeholder="Username">
         <label for="username">Usuario</label>
     </div>
     <div class="form-floating mt-2">
-        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="password" class="form-control" name="passwordLogin" placeholder="Password">
         <label for="password">Contraseña</label>
     </div>
+
     <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
 </form>
 {% endblock %}
