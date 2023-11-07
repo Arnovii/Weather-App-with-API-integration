@@ -9,6 +9,8 @@
 {% block body %} <!-- con 'action' indico a donde es enviado el formulario cuando se pulse el boton type=submit  -->
 <form class="form-signin" action="/login" method="POST">
     <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="200" height="200">
+    
+    <!-- IMPRESION DE LOS FLASHES EN PANTALLA - MENSAJES DE ERROR. -->
     {% with messages = get_flashed_messages() %}
 
     {% if messages %}
@@ -22,6 +24,8 @@
     {% endif %}
 
     {% endwith %}
+    <!-- |-----------------------------------------------------------------------------------------------------------| -->
+
     <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
         <!-- AQUI HE BORRADO UNA LINEA -->
     <div class="form-floating">

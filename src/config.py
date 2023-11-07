@@ -10,6 +10,7 @@ class DevelopmentConfig(Config):
     MYSQL_USER = 'root'
     MYSQL_PASSWORD = ''
     MYSQL_DB = 'testingpythondb'
+    MYSQL_PORT = 3307
 
 configuration = {
     'development': DevelopmentConfig,
